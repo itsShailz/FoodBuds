@@ -1,0 +1,40 @@
+<!--
+   <ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+  <div id="Logo">
+    <h1>FoodBuds</h1>
+  </div>
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+      </div>
+      <button class="button button-block button-assertive" ng-click="login()">Login</button>
+      <button class="button button-block button-assertive">Register</button>
+      <div>
+        <p>Insert icon logo here</p>
+        <a href="#"><p>Forgot Password?</p></a>
+      </div>
+  </ion-content>
+</ion-view> -->
+
+<ion-view title="Account">
+  <ion-content>
+    <div class="list" ng-show="showLoginForm">
+      <label class="item item-input">
+        <span class="input-label">Email</span><input type="text" ng-model="em"/>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span><input type="password" ng-model="pwd"/>
+      </label>
+      <button class="button button-block button-positive" ng-click="login(em, pwd)">Login</button>
+    </div>
+    <div class="card" ng-hide="showLoginForm">
+      <div class="item item-text-wrap">You are logged in as {{user.password.email}}</div>
+    </div>
+    <button class="button button-stable" ng-click="logout()" ng-hide="showLoginForm">Logout</button>
+  </ion-content>
+</ion-view>
